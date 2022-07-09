@@ -1,0 +1,55 @@
+$color1: #00141B;
+$color2: #003E50;
+$color3: #2D8DAA;
+$color4: #57B0CD;
+$color5: #A8DCF3;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 10vh;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    height: 90vh;
+    scroll-snap-align: start;
+}
+
+.container1 {
+    color: white;
+    background-color: $color1;
+}
+
+.container2 {
+    background-color: $color2;
+}
+
+.container3 {
+    background-color: $color2;
+}
+
+.container4 {
+    background-color: $color2;
+}
+
+.container5 {
+    background-color: $color2;
+}
+
+.menu-container {
+    color: white;
+    position: sticky;
+    top: 0;
+    background-color: $color1;
+    height: 10vh;
+    box-shadow: 0px 1px 4px black;
+}

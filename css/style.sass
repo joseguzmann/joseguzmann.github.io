@@ -1,0 +1,52 @@
+$color1: #00131a
+$color2: #00394d
+$color3: #005e80
+$color4: #0084b3
+$color5: #00aae6
+$color6: #1ac3ff
+$color7: #4dd1ff
+$color8: #80deff
+$color9: #b3ebff
+$color10: #e5f8ff
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300;400&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    border: 0
+    font-family: 'Montserrat', sans-serif
+
+html
+    scroll-snap-type: y mandatory
+    scroll-padding-top: 10vh
+
+.container
+    height: 90vh
+    scroll-snap-align: start
+    color: $color8
+
+.container1
+    background-color: $color1
+
+.container2
+    background-color: $color2
+
+.container3
+    background-color: $color2
+
+.container4
+    background-color: $color2
+
+.container5
+    background-color: $color2
+
+.menu-container
+    color: $color8
+    position: sticky
+    top: 0
+    background-color: $color1
+    height: 10vh
+
+html:not([data-scroll='0']) .menu-container
+    box-shadow: 0px 1px 4px black
