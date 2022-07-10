@@ -43,6 +43,7 @@ html {
   top: 0;
   background-color: #00131a;
   height: 10vh;
+  transition: box-shadow 1s;
 }
 
 html:not([data-scroll="0"]) .menu-container {
