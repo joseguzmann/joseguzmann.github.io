@@ -10,6 +10,7 @@ $color9: #b3ebff
 $color10: #e5f8ff
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300;400&display=swap')
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800)
 
 *
     margin: 0
@@ -41,13 +42,79 @@ html
 .container5
     background-color: $color2
 
+html:not([data-scroll='0']) .menu-container
+    box-shadow: 0px 1px 4px black
+
+/* MENU STYLE */
+
 .menu-container
+    display: flex
+    align-items: center
+    justify-content: center
     color: $color8
     position: sticky
     top: 0
     background-color: $color1
     height: 10vh
     transition: box-shadow 1s
+  
 
-html:not([data-scroll='0']) .menu-container
-    box-shadow: 0px 1px 4px black
+.menu-list 
+    font-family: 'Raleway', Arial, sans-serif
+    text-align: center
+    text-transform: uppercase
+    font-weight: 500
+    font-size: large
+    align-content: center
+
+
+.menu-list * 
+    box-sizing: border-box
+    -webkit-transition: all 0.35s ease
+    transition: all 0.35s ease
+
+
+.menu-list li 
+    display: inline-block
+    list-style: outside none none
+    margin: 0 1.5em
+    overflow: hidden
+
+
+.menu-list a 
+    padding: 0.3em 0
+    color: rgba(255, 255, 255, 0.5)
+    position: relative
+    display: inline-block
+    letter-spacing: 1px
+    margin: 0
+    text-decoration: none
+
+
+.menu-list a:before, .menu-list a:after 
+    position: absolute
+    -webkit-transition: all 0.35s ease
+    transition: all 0.35s ease
+
+
+.menu-list a:before 
+    bottom: 100%
+    display: block
+    height: 3px
+    width: 100%
+    content: ""
+    background-color: $color4
+
+
+.menu-list a:after 
+    padding: 0.3em 0
+    position: absolute
+    bottom: 100%
+    left: 0
+    content: attr(data-hover)
+    color: white
+    white-space: nowrap
+
+.menu-list li:hover a, .menu-list .current a 
+    transform: translateY(100%)
+

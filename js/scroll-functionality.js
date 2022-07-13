@@ -1,3 +1,5 @@
+// console.log(window.innerHeight); 632.7  
+
 const storeScroll = () => {
     document.documentElement.dataset.scroll = window.scrollY;
     console.log(document.documentElement.dataset.scroll);
