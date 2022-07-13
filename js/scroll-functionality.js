@@ -1,11 +1,34 @@
-// console.log(window.innerHeight); 632.7  
+console.log(window.innerHeight); 632.7  
+
 
 const storeScroll = () => {
     document.documentElement.dataset.scroll = window.scrollY;
     console.log(document.documentElement.dataset.scroll);
+    actualizarMenuScroll();
 };
 
-let debounced = _.debounce(storeScroll, 250, {'leading': true, 'trailing': true});
+const actualizarMenuScroll = () => {
+    let liMenu = document.querySelectorAll(".menu-container ul li");
+    currentList = document.getElementsByClassName("current");
+    for(let li of currentList) {
+        li.classList.remove("current");
+    }
+    if(window.scrollY <= 0.45*window.innerHeight) {
+        liMenu[0].classList.add("current");
+        console.log("primera");
+    } else if(0.45*window.innerHeight < window.scrollY && window.scrollY <= 1.35*window.innerHeight) {
+        liMenu[1].classList.add("current");
+        console.log("segunda")
+    } else if(1.35*window.innerHeight < window.scrollY && window.scrollY <= 2.25*window.innerHeight) {
+        liMenu[2].classList.add("current");
+        console.log("tercera")
+    } else if(2.25*window.innerHeight < window.scrollY && window.scrollY <= 3.15*window.innerHeight) {
+        liMenu[3].classList.add("current");
+        console.log("cuarta")
+    }
+}
+
+let debounced = _.throttle(storeScroll, 250, {'leading': false, 'trailing': true});
 
 document.addEventListener('scroll', debounced);
 
