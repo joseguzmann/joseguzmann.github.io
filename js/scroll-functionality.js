@@ -47,13 +47,44 @@ const actualizarMenuScroll = () => {
 }
 
 
-let debounced = _.debounce(storeScroll, 20, {'leading': false, 'trailing': true});
+let debounced = _.debounce(storeScroll, 17, {'leading': false, 'trailing': true});
 
 document.addEventListener('scroll', debounced);
 
 storeScroll();
 
 //--------------------------------------------------------------
+// let lastTop = window.scrollY;
+
+// const storeScroll = () => {
+//     document.documentElement.dataset.scroll = window.scrollY;
+
+//     // console.log("LastTop: " + lastTop);
+//     // console.log("scrollY: " + window.scrollY);
+
+//     let cambio;
+    
+//     if(window.scrollY > lastTop) {
+//         cambio = "bajando";
+//     } else if(window.scrollY < lastTop) {
+//         cambio = "subiendo";
+//     }
+    
+//     console.log(cambio);
+
+    
+//     lastTop = window.scrollY;
+// };
+
+// let debounced = _.debounce(storeScroll, 50, {'leading': true, 'trailing': true});
+
+
+// document.addEventListener('scroll', debounced);
+
+// storeScroll();
+
+//--------------------------------------------------------------
+
 
 // let lastTop = window.scrollY;
 
